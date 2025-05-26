@@ -33,8 +33,12 @@ public class Postagem {
 
     @ManyToOne
     @JsonIgnoreProperties("postagens")
-    @JoinColumn(name = "tema_id") // opcional
+    @JoinColumn(name = "tema_id") 
     private Tema tema;
+    
+    @ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;
 
     // Getters e Setters
 
